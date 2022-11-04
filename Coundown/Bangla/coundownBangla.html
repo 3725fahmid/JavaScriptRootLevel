@@ -1,0 +1,203 @@
+<html>
+
+<head>
+<style>
+
+	.container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    cursor: pointer;   
+     display: block;
+}
+	.containerpadma {
+        border: 2px solid red; 
+        padding: 10px 10px 0px 10px; 
+        width:96%; 
+        margin-top: 20px;
+		margin-bottom: 20px;
+    }
+    .padmabridge{
+        position: relative;
+    }  
+    .countdownNumber{
+        position: absolute;
+        font-size: 60px;
+        font-weight: bold;
+        top: 20.5%;
+        
+    }
+    .pfontsize1 {
+        left: 36.5%; color: #008000;
+    }
+    .pfontsize2 {
+        left: 46.5%; color: #008000;
+    }   
+    .pfontsize3 {
+        left: 56%; color: #008000;
+    }  
+    .p5 {
+        left: 65.5%; color: #FF5733;
+    }   
+
+    @media only screen and (max-width: 600px) {
+        .containerpadma{
+			border: 2px solid red; 
+			padding: 10px 10px 0px 10px; 
+			width:93%; 
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.countdownNumber{
+            position: absolute;
+            font-size: 18px;
+            font-weight: bold;
+            top: 24%;
+        }
+        .pfontsize1 {
+            left: 36.5%; color: #008000;
+        }
+        .pfontsize2 {
+            left: 46.5%; color: #008000;
+        }   
+        .pfontsize3 {
+            left: 56%; color: #008000;
+        }   
+        .p5 {
+            left: 65.5%; color: #FF5733;
+        }
+      
+    }
+</style>
+
+</head>
+
+
+
+<body>
+    <div class="container containerpadma">
+    <div class="padmabridge">
+<!--    <img src="padmabridgecountdown.jpeg" alt="padmabridgecoundown" style="width: 100%;" >
+-->
+    <span id="days" class="countdownNumber pfontsize1"></span>
+    <span id="hours" class="countdownNumber pfontsize2"></span>
+    <span id="minutes" class="countdownNumber pfontsize3"></span>
+    <span id="seconds" class="countdownNumber p5"></span>
+    
+    </div>
+    </div>
+</body>
+
+
+<script>
+
+
+    // Set the date we're counting down to
+
+    var countDownDate = new Date("JULY 28, 2022 10:00:00").getTime();
+    var currentdate   = new Date().getTime();
+
+    //var countDownDate = new Date("OCT 10, 2019 14:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        //var Year = Math.floor((distance / (1000 * 60 * 60 * 24))/365);
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        if (distance > 0) {
+            document.getElementById("days").innerHTML = englishBangla((days < 10)?"0"+days:days);
+            document.getElementById("hours").innerHTML = englishBangla((hours < 10)?"0"+hours:hours);
+            document.getElementById("minutes").innerHTML = englishBangla((minutes < 10)?"0"+minutes:minutes);
+            document.getElementById("seconds").innerHTML = englishBangla((seconds < 10)?"0"+seconds:seconds);
+        }else{
+            document.getElementById("days").innerHTML = englishBangla(0);
+            document.getElementById("hours").innerHTML = englishBangla(0);
+            document.getElementById("minutes").innerHTML = englishBangla(0);
+            document.getElementById("seconds").innerHTML = englishBangla(0);
+        }
+        // + englishBangla(hours) + " ঘন্টা " + minutes + " মিনিট " + seconds + " সেকেন্ড ";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+    function englishBangla(degits) {
+        var banglaDigits = {
+            '0': '০',
+            '1': '১',
+            '2': '২',
+            '3': '৩',
+            '4': '৪',
+            '5': '৫',
+            '6': '৬',
+            '7': '৭',
+            '8': '৮',
+            '9': '৯'
+        };
+
+        var amount = degits;
+
+        /* Converting English number to Devangari (js) */
+        var amount_np = amount.toString().replace(/[0123456789]/g, function (s) {
+            return banglaDigits[s];
+        });
+        return amount_np;
+        // console.log(amount_np); // Output: ९८५७
+    }
+
+    var englishDigits = {
+        '০': '0',
+        '১': '1',
+        '২': '2',
+        '৩': '3',
+        '৪': '4',
+        '৫': '5',
+        '৬': '6',
+        '৭': '7',
+        '৮': '8',
+        '৯': '9'
+    };
+
+
+    var banglaDigits = {
+        '0': '০',
+        '1': '১',
+        '2': '২',
+        '3': '৩',
+        '4': '৪',
+        '5': '৫',
+        '6': '৬',
+        '7': '৭',
+        '8': '৮',
+        '9': '৯'
+    };
+
+    var amount = 9857;
+
+    /* Converting English number to Devangari (js) */
+    var amount_np = amount.toString().replace(/[0123456789]/g, function (s) {
+        return banglaDigits[s];
+    });
+
+    console.log(amount_np);
+
+
+</script>
+
+</html>

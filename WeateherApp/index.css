@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    color: aliceblue;
+    background: linear-gradient(180deg, rgba(56,119,39,1) 0%, rgba(103,82,33,1) 64%, rgba(143,117,8,1) 100%, rgba(0,212,255,1) 100%);
+  }
+  /* align items center vertically and horizontally  */
+  .Mcontainer{
+    display: flex;
+    justify-content: center;
+    align-items:center !important;
+    height: 100vh;
+  }
+
+  .card {
+    background-color: rgb(3, 80, 84);
+    width: 30rem;
+    height: auto;
+    border-radius: 7px;
+    padding: 3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  .imge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imge img {
+    height: 150px;
+    width: 240px;
+  }
+.CntryCapital {
+  text-align: center;
+  padding: 1rem;
+}
+.extraData {
+  background-color: rgb(72, 41, 0);
+  border-top: 2px solid red;
+  border-radius:15px;
+  width: 25rem;
+  height: 7rem;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

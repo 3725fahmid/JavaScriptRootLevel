@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+
+  <!-- jQuery CDN Link -->
+  <title>Weather</title>
+</head>
+
+<body>
+  <div class="Mcontainer">
+    <div class="form">
+        <div id="container">
+    </div>
+  </div>
+
+
+  <script>
+
+const container = document.querySelector('#container');
+
+const request = new XMLHttpRequest();
+request.open('GET',"https://restcountries.com/v3.1/name/bangladesh");
+request.send();
+
+// To get the responce
+
+request.addEventListener('load', function(){
+    // console.log(this.responseText);
+    const [data] = JSON.parse(this.responseText);
+    //  console.log(data.flags.png);
+    const htmlData = `
+    <div class='card'>
+                <div class="imge">
+                    <img src="${data.flags.png}" alt="flag">
+                    
+                    </div>
+                <div class="CntryCapital">
+                    <h2>${data.name.nativeName.ben.common}</h2>
+                    <h3>Capital : ${data.capital[0]}</h3>
+                </div>
+                <div class="extraData">
+                    <div>
+                        <h4>${data.languages.ben}</h4>
+                        <p>active language</p>
+                    </div>
+                    <div>
+                        <h4>${data.population}</h4>
+                        <p>population</p>
+                    </div>
+                    <div>
+                        <h4>${data.demonyms.eng.f}</h4>
+                        <p>demonyms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    container.insertAdjacentHTML('afterbegin',htmlData)
+    
+})
+
+  </script>
+
+
+</body>
+
+</html>

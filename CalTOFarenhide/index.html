@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C to F</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Mcontainer">
+        <div class="card">
+           <form id="tempcal" onsubmit="caltem(); return false" >
+            <label for="temp">Place enter the tempareture for converting</label>
+            <br/><input type="number" name="temp" id="tem" >
+            <select name="temp_diff" id="temp_diff">
+                <option value="cal">°Celsius</option>
+                <option value="fah">°Fahrenheit</option>
+            </select><br/>
+            <input type="submit" name="temp" ><br>
+            <span id="resultContainer" ></span>
+           </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

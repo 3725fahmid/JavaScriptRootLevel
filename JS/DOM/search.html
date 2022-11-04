@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color:rgb(73, 46, 13) ;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+            font-size: medium;
+            font-size: 1rem;
+            margin-top: 5rem;
+        }
+        p ,form{
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+        }
+        button{
+            height: 2rem;
+            width: 15rem;
+            background-color: sandybrown;
+            color: aliceblue;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight:400;
+            border: none;
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <p class="pa">This is first</p>
+    <p class="pa">This is second</p>
+    <h1 id="Ch">Change the content of h1 with click Event</h1>
+
+    <form action="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">others</label>
+        <input type="radio" name="gender" id="">
+    </form>
+
+    <button onclick="forChang()">Click me</button>
+
+    <script>
+        const forChang = () => {
+
+            //-----------  USE document.getElementById ------------
+
+            //WE can directly write
+            //document.getElementById('Ch').innerHTML = 'This is konok';
+
+            //we can write it with refarence 
+            //by taking the reference , heading is an object here
+            // const chanHeading = document.getElementById('Ch');
+            // chanHeading.innerHTML = 'KONOK';
+
+            // console.log(document.getElementsByTagName('p'));
+
+            // console.log(document.getElementsByName('gender'));
+
+            //-----------  USE document.querySelector ------------
+
+            // querySelector returns first metching elements
+            // document.querySelectorAll returns all elements 
+
+            document.querySelector('#Ch').innerHTML = 'This is queryselector'
+
+        } 
+    </script>
+</body>
+</html>

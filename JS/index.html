@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: gray;
+            color: aliceblue;
+        }
+        .main{
+            margin-top: 12rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            font-size: 30px;
+        }
+        button{
+            width: 15rem;
+            height: 4rem;
+            border: none;
+            border-radius: 5rem;
+            background-color: rgb(255, 255, 0);
+            color: rgb(66, 60, 9);
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .clock {
+            width: 45rem;
+            height: 14rem;
+            background-color: darkcyan;
+            color: aliceblue;
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+    <p>Click and show the time</p>
+    <button onclick="Mytime()"> Get date</button>
+    <p id="demo" class="clock"></p>
+</div>
+
+    <script>
+        function Mytime() {
+            document.getElementById('demo').innerHTML = `Loading...`
+            setInterval(() => {
+                var Myd = new Date().toLocaleString();
+                document.getElementById('demo').innerHTML = Myd;
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>

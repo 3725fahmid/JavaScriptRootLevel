@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body
+{
+  background-color:#2d3c10;
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+  gap: 20px;
+}
+
+ul
+{
+  font-size:20px;
+  letter-spacing: 5px;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  margin:40px  ;
+  padding: 40px;
+  background: #aa5d00;
+
+}
+
+.center
+{
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#demo {
+  color: rgb(255, 151, 15);
+}
+
+/* End Non-Essential  */
+
+.property-card
+{
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  height:500px;
+  width:auto;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="property-card">
+          <h5>Median Number</h5><hr/>
+            <h5 id="demo"></h5><hr/>
+            <h5>Arrys</h5><hr/>
+            <ul id="demo2">
+    
+            </ul>
+        </div>
+      </div>
+    <script src="median.js"></script>
+</body>
+</html>

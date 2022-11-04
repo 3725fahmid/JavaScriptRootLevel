@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    /* color: aliceblue; */
+    background: linear-gradient(180deg, rgb(39, 53, 62) 0%, rgb(52, 37, 5) 64%, rgb(75, 12, 3) 100%, rgb(0, 5, 63) 100%);
+  }
+  /* align items center vertically and horizontally  */
+  .Mcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center !important;
+    height: 100vh;
+  }
+  .card {
+    background-color: #FF92A5;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    padding: 3rem;
+    box-shadow: rgba(255, 136, 0, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  #tempcal {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  input {
+    width: 150px;
+    height: 35px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 15px;
+  }
+  #temp_diff {
+        width: 7rem;
+        height: 2rem;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        font-size: 20px;
+        cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: rgb(255, 255, 255);
+  }
