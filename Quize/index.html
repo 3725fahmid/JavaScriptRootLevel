@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- jQuery CDN Link -->
-  <title>Quize with real Api</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quize</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap" rel="stylesheet"> 
 </head>
-
 <body>
-  <div class="Mcontainer">
-            <div class="card">
-                <h2>Best joks to make your day enjoyable</h2>
-                <div id="joke" class="joke">Loading ...</div>
-                <button id="jokeBtn" class="btn">Next</button>
-            </div>
-</div>
-<script src="script.js"></script>
+    <section class="container">
+        <div class="Inner">
+            <h1 class="quz">Question Here</h1>
+
+            <ul>
+                <li>
+                    <input type="radio" name="ans" id="ans1" class="answer">
+                    <label for="ans1" id="op1">Option</label>
+                </li>
+                <li>
+                    <input type="radio" name="ans" id="ans2" class="answer">
+                    <label for="ans2" id="op2">Option</label>
+                </li>
+                <li>
+                    <input type="radio" name="ans" id="ans3" class="answer">
+                    <label for="ans3" id="op3">Option</label>
+                </li>
+                <li>
+                    <input type="radio" name="ans" id="ans4" class="answer">
+                    <label for="ans4" id="op4">Option</label>
+                </li>
+            </ul>
+            <button id="btn">Submit</button>
+            <div class="scoreArea" id="score"></div>
+        </div>
+    </section>
+
+    <script src="idex.js"></script>
 </body>
 </html>

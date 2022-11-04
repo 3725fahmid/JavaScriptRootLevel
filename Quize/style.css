@@ -1,63 +1,102 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-size: cover;
-    background-attachment: fixed;
-    color: aliceblue;
-    background: linear-gradient(180deg, rgba(56,119,39,1) 0%, rgba(103,82,33,1) 64%, rgba(143,117,8,1) 100%, rgba(0,212,255,1) 100%);
-  }
-  /* align items center vertically and horizontally  */
-  .Mcontainer{
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+html {
+    font-size: 72.5%;
+}
+
+.container {
     width: 100%;
+    min-height: 100vh;
+    /* background-color: rgb(1, 72, 75); */
+    background-color: hsl(182, 95%, 17%);
     display: flex;
-    justify-content: center;
-    align-items:center;
-    height: 100vh;
-  }
-  .card {
-    background-color: rgb(3, 80, 84);
-    width: 70%;
-    min-height: 60%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 7px;
-    padding: 3rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  }
 
-  .card h2 {
+}
+.Inner {
+    width: 80rem;
+    height: auto;
+    margin: 4rem ;
+    background-color: azure;
+    border-radius: 20px;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.6);
+}
+
+.Inner h1 {
     text-align: center;
-    font-size: 35px;
-    padding: 5px;
-    margin-top: 5px;
-  }
-  .joke{
-    text-align: center;
-    text-transform: capitalize;
-    color: chartreuse;
-    font-size: 25px;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 4.5rem;
+    margin: 4rem 0 4rem 0;
+}
+.Inner ul {
+    list-style: none;
+    font-size: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 4rem 2rem 4rem 0;
     padding: 2rem;
-    margin: 10px  10px;
-  }
-  .btn {
-        width: 7rem;
-        height: 3rem;
-        border: none;
-        border-radius: 10px;
-        background-color: rgb(255, 145, 0);
-        font-size: 20px;
-        cursor: pointer;
-        box-shadow: rgb(255, 255, 255) 0px 2px 3px;
-        transition: all 2s;
-  }
+}
+.Inner li {
+    text-align: left;
+}
+input {
+    cursor: pointer;
+}
 
-  .btn:hover {
-    background-color: rgb(255, 255, 255);
-  }
+#btn, .Btn1 {
+    background-color: rgb(8, 116, 170);
+    width: 200px;
+    height: 50px;
+    color: wheat;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+#btn:hover {
+    background-color: darkcyan;
+}
+
+#score {
+    background-color: rgb(43, 66, 79);
+    margin: 2rem 3rem 2rem 3rem;
+    padding: 4rem 7rem;
+    border-radius: 20px;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.6);
+    color: aliceblue;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+.scoreArea {
+    display: none;
+}
+
+#score .btn {
+    margin: 4rem;
+    background-color: rgb(21, 50, 40);
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: progress;
+}
+
+#score .btn:hover {
+    background-color: rgb(28, 121, 90);
+}
