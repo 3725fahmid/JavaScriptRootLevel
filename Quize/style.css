@@ -15,12 +15,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items:center !important;
+    align-items:center;
     height: 100vh;
   }
   .card {
     background-color: rgb(3, 80, 84);
     width: 70%;
+    min-height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,16 +33,18 @@
 
   .card h2 {
     text-align: center;
-    font-size: 15px;
+    font-size: 35px;
     padding: 5px;
     margin-top: 5px;
   }
   .joke{
     text-align: center;
     text-transform: capitalize;
-    font-size: 40px;
-    padding: 3rem;
-    margin: 10px  10px ;
+    color: chartreuse;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 2rem;
+    margin: 10px  10px;
   }
   .btn {
         width: 7rem;
@@ -52,6 +55,7 @@
         font-size: 20px;
         cursor: pointer;
         box-shadow: rgb(255, 255, 255) 0px 2px 3px;
+        transition: all 2s;
   }
 
   .btn:hover {
